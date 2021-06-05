@@ -21,20 +21,20 @@ while opc != 4:
 
 #Chamando a função transfer de cliente.py
     if opc == 1:
-        ler.ls_l()
+        ls_l()
         file = input("Digite o nome do arquivo: ")
-        cliente.transfer(file)
+        transfer(file)
     elif opc == 2:
-        ler.ls_l()
+        ls_l()
         dir = input("Caminho do diretório a ser zipado: ")
         zipname = input("Nome do arquivo .zip (sem .zip): ")
         savepath = input(f"Caminho para salvar o arquivo {zipname}.zip localmente antes de enviar: ")
-        comprimir.ziper(zipname, savepath, dir)
+        ziper(zipname, savepath, dir)
     elif opc == 3: 
-        ler.ls_l()
+        ls_l()
         filename = input("Digite o nome do arquivo: ")
-        key = criptografia.load_key()
-        criptografia.encrypt(filename, key)
+        key = load_key()
+        encrypt(filename, key)
     else:
         print('Opção não reconhecida')
     sleep(3)
